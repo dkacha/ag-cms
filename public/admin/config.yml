@@ -1,0 +1,15 @@
+backend:
+  name: git-gateway
+  branch: main # Nebo název větve, kde máš obsah
+
+media_folder: "static/images/uploads" # Kde se ukládají mediální soubory v repozitáři
+public_folder: "/images/uploads" # Veřejná cesta pro obrázky
+
+collections:
+  - name: "pages"
+    label: "Stránky"
+    folder: "content/pages" # Cesta k obsahu
+    create: true
+    fields:
+      - { label: "Titulek", name: "title", widget: "string" }
+      - { label: "Obsah", name: "body", widget: "markdown" }
